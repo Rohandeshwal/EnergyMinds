@@ -1,0 +1,3 @@
+# Ignore all .css and .map files
+*.css
+*.map
