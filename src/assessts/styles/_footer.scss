@@ -1,7 +1,17 @@
 footer {
+  .divider {
+    padding: 11px 0;
+    .dividerin {
+      height: 1px;
+      background-color: #000000;
+    }
+  }
   .btmSec {
     p {
       margin: 0;
+      a {
+        color: #000;
+      }
     }
   }
 }
