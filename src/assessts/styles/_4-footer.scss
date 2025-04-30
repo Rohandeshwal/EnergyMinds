@@ -1,4 +1,17 @@
 footer {
+  .topSec {
+    .contactDetails {
+      .condtlItemicon {
+        font-size: 20px;
+      }
+      .condtlItemtext {
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
   .divider {
     padding: 11px 0;
     .dividerin {

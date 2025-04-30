@@ -1,6 +1,10 @@
-@import "_footer";
-@import "_header";
+@import "_1-variables";
+@import "_2-mixin";
+@import "_3-elements";
+@import "_4-footer";
+@import "_5-header";
 
 a {
   text-decoration: none;
+  @include link;
 }
