@@ -17,27 +17,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="stylesheet" href="/src/assessts/styles/styles.css" />
   </head>
   <body>
     <div id="header"></div>
 
-    <main>
+    <main style="height: 100vh">
       <h2>Welcome</h2>
       <p>This is the main content of the page.</p>
     </main>
 
-    <div id="footer"></div>
-    <footer>
+    <footer class="footer py-4">
       <div class="container">
         <div class="topSec">
           <div class="row">
-            <div class="topleftsec col-md-6 col-12">
-              <div class="contactDetailsTtl">
-                <p><strong>CONTACT US </strong></p>
+            <div class="topleftsec col-lg-8 col-md-6 col-12">
+              <div class="contactDetailsTtl mb-3">
+                <h5><strong>CONTACT US </strong></h5>
               </div>
-              <div class="contactDetails d-flex flex-column gap-3">
-                <div class="d-flex gap-2 condtlItem">
+              <div class="contactDetails d-flex flex-column gap-4 gap-md-3">
+                <div class="d-flex gap-3 condtlItem">
                   <span class="condtlItemicon"
                     ><i class="fa-solid fa-location-dot"></i
                   ></span>
@@ -48,7 +48,7 @@
                     </p></span
                   >
                 </div>
-                <div class="d-flex gap-2 condtlItem">
+                <div class="d-flex gap-3 condtlItem">
                   <span class="condtlItemicon"
                     ><i class="fa-solid fa-phone-volume"></i
                   ></span>
@@ -58,7 +58,7 @@
                     </p></span
                   >
                 </div>
-                <div class="d-flex gap-2 condtlItem">
+                <div class="d-flex gap-3 condtlItem">
                   <span class="condtlItemicon"
                     ><i class="fa-solid fa-envelope"></i
                   ></span>
@@ -70,9 +70,9 @@
                 </div>
               </div>
             </div>
-            <div class="topRightsec col-md-6 col-12">
+            <div class="topRightsec col-lg-4 col-md-6 col-12 mt-md-0 mt-4">
               <div class="rightForm">
-                <h6 class="contactmaintitle">
+                <h6 class="contactmaintitle mb-3">
                   <strong>Sign Up for Newsletter</strong>
                 </h6>
                 <div class="contactFormWrap">
@@ -82,9 +82,6 @@
                       data-id="email"
                       data-type="email"
                     >
-                      <label for="contact_email" class="contact_form_label"
-                        >Email Address</label
-                      >
                       <input
                         type="text"
                         id="email"
@@ -106,10 +103,12 @@
                   </form>
                 </div>
               </div>
-              <div class="ftrSocailShare mt-3 text-md-end">
-                <h6 class="ftrSocailShareTtl"><strong>Find us here</strong></h6>
+              <div class="ftrSocailShare mt-4 mt-md-3 text-md-end">
+                <h6 class="ftrSocailShareTtl mb-3">
+                  <strong>Find us here</strong>
+                </h6>
                 <ul
-                  class="d-flex gap-2 m-0 p-0 list-unstyled justify-content-md-end"
+                  class="d-flex gap-3 m-0 p-0 list-unstyled justify-content-md-end"
                 >
                   <li>
                     <a href="http://"
@@ -131,8 +130,8 @@
         <div class="divider">
           <div class="dividerin"></div>
         </div>
-        <div class="btmSec py-4">
-          <div class="row">
+        <div class="btmSec pt-4">
+          <div class="row gap-3 gap-md-0">
             <div class="copyright col-md-6 col-12">
               <p>
                 Copyright 2022-2025. Manikaran Power Ltd. All rights reserved.
@@ -141,8 +140,9 @@
             <div class="copyrightLink col-md-6 col-12 text-md-end">
               <p>
                 <a href="#" target="_self" rel="noopener"
-                  >Statutory Information </a
-                >| <a href="/privacy-policy">Privacy Policy</a> |
+                  >Statutory Information
+                </a>
+                | <a href="/privacy-policy">Privacy Policy</a> |
                 <a href="/disclaimer" 4>Disclaimer</a>
               </p>
             </div>
@@ -150,6 +150,9 @@
         </div>
       </div>
     </footer>
+    <span id="scrollTop" class="scroll_top"
+      ><i class="fa-solid fa-angle-up"></i
+    ></span>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
