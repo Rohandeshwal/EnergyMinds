@@ -59,7 +59,20 @@ footer {
     }
   }
 }
-span.scroll_top {
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.scroll_top {
   text-align: center;
   background: rgba($black, 0.4);
   text-decoration: none;
@@ -87,18 +100,4 @@ span.scroll_top {
   opacity: 1;
   -webkit-animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
   animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
 }
