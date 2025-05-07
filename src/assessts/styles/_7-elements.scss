@@ -1,0 +1,12 @@
+body {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 18px;
+  line-height: 1.7em;
+  color: $black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+}
+a {
+  @include link;
+}

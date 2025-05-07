@@ -1,0 +1,198 @@
+header {
+  .container {
+    position: relative;
+  }
+  .headerLogo {
+    max-width: 250px;
+    @include tabletvert {
+      max-width: 180px;
+    }
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+      height: auto;
+    }
+  }
+
+  .headerMenu {
+    width: calc(100% - 250px);
+    @include tabletvert {
+      width: calc(100% - 180px);
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .desktopMenuNav {
+      > ul {
+        > li {
+          position: relative;
+          margin-right: 15px;
+          padding-right: 15px;
+          line-height: 1em;
+          font-size: 14px;
+          font-weight: 600;
+          > a {
+            padding: 20px 0;
+            &:hover {
+              color: $fieryRed;
+            }
+          }
+
+          &.hsSubMenu {
+            &:after {
+              content: "";
+              height: 14px;
+              width: 1px;
+              display: block;
+              background: $black;
+              position: absolute;
+              right: 0;
+              top: 20px;
+            }
+            > a {
+              padding-right: 20px;
+            }
+          }
+          ul.subMenu {
+            background-color: $black;
+            position: absolute;
+            padding: 20px 0;
+            z-index: 9999;
+            width: 240px;
+            visibility: hidden;
+            opacity: 0;
+            border-top: 3px solid $fieryRed;
+            box-shadow: 0 2px 5px rgba($black, 0.1);
+            -moz-box-shadow: 0 2px 5px rgba($black, 0.1);
+            -webkit-box-shadow: 0 2px 5px rgba($black, 0.1);
+            -webkit-transform: translateZ(0);
+            li {
+              font-size: 14px;
+              position: relative;
+              line-height: 2em;
+              a {
+                font-size: 14px;
+                line-height: 1.45;
+                padding: 6px 20px;
+                color: $white;
+                &:hover {
+                  color: $fieryRed;
+                }
+              }
+              ul {
+                left: 100%;
+                top: -23px;
+              }
+            }
+          }
+        }
+        li:hover {
+          > a {
+            color: $fieryRed;
+          }
+          > ul {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .hsSubMenu {
+          > a {
+            position: relative;
+            i {
+              position: absolute;
+              right: 0;
+            }
+          }
+
+          ul {
+            li.hsSubMenu {
+              > a {
+                display: block;
+                i {
+                  right: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobileMenuWrap {
+      .mobile_menu_bar {
+        font-size: 32px;
+        cursor: pointer;
+        @include tabletvert {
+          font-size: 26px;
+        }
+      }
+      .mobileMenu {
+        top: calc(100% + 10px);
+        position: absolute;
+        left: 0;
+        padding: 5%;
+        background: $white;
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
+        // display: none;
+        z-index: 9999;
+        border-top: 3px solid $fieryRed;
+        box-shadow: 0 2px 5px rgba($black, 0.1);
+        -moz-box-shadow: 0 2px 5px rgba($black, 0.1);
+        -webkit-box-shadow: 0 2px 5px rgba($black, 0.1);
+        li {
+          > a {
+            display: block;
+            padding: 12px 0;
+            position: relative;
+            font-size: 16px;
+            line-height: 1;
+            i {
+              position: absolute;
+              right: 0;
+              transition: 0.3s all ease-in;
+            }
+          }
+          ul.subMenu {
+            // display: none;
+            padding-left: 15px;
+          }
+          &.hsSubMenu.active {
+            > a {
+              i {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tabletMidmin {
+  .desktopHide {
+    display: none;
+  }
+}
+
+@include tabletMid {
+  .mobileHide {
+    display: none;
+  }
+
+  //   .subMenu,
+  //   .mobileMenu {
+  //     max-height: 0;
+  //     overflow: hidden;
+  //     transition: max-height 0.3s ease;
+  //   }
+
+  //   /* Active (open) state */
+  //   .subMenu.open,
+  //   .mobileMenu.open {
+  //     max-height: 1000px;
+  //   }
+}
