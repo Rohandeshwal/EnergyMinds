@@ -1,0 +1,26 @@
+.banner {
+  padding: 4% 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $white;
+  .bannerIn {
+    padding-top: 200px;
+    padding-bottom: 50px;
+  }
+}
+
+.carousel-indicators {
+  [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border: 1px solid $white;
+    border-radius: 100%;
+    background: no-repeat;
+    opacity: 1;
+    &.active {
+      background-color: $fieryRed;
+      border-color: $fieryRed;
+    }
+  }
+}
